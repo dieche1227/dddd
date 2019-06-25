@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		
+//		//把以上的数组想做一个排序
+//		//想给他做成升序的
+//		9,8,7,6,5
+//		8,9,7,6,5
+//		8,7,9,6,5
+//		8,7,6,9,5
+//		8,7,6,5,9
+//		
+//		7,8,6,5,9
+//		7,6,8,5,9
+//		7,6,5,8,9
+//		7,6,5,8,9
+//		
+//		6,7,5,8,9
+//		6,5,7,8,9
+//		6,5,7,8,9
+//		6,5,7,8,9
+//	
+//		5,6,7,8,9
+//		5,6,7,8,9
+//		5,6,7,8,9
+//		5,6,7,8,9
+//		
+//		
+//		
+//		
+//		//如何用程序实现刚才的步骤
+//		var arr = [9,8,7,6,5];
+//		
+//		for(var j=0;j<4;j++){
+//			for(var i=0;i<arr.length-1-j;i++)
+//			{
+//				if(arr[i]>arr[i+1]){
+//					var tmp=arr[i+1];
+//					arr[i+1]=arr[i];
+//					arr[i]=tmp;
+//				}
+//			}
+//		}
+//		console.log(arr);
+		var arr =[9,8,7,6,5];
+		第一趟冒泡完成
+//		9 8 7 6 5
+//		8 9 7 6 5
+//		8 7 9 6 5
+//		8 7 6 9 5
+//		8 7 6 5 9
+        第2趟冒泡完成
+        7 8 6 5 9
+        7 6 8 5 9
+        7 6 5 8 9
+        7 6 5 8 9
+         第3趟冒泡完成
+        6 7 5 8 9
+        6 5 7 8 9
+        6 5 7 8 9
+        6 5 7 8 9
+        第4趟冒泡完成
+        5 6 7 8 9
+        5 6 7 8 9 
+        5 6 7 8 9
+        5 6 7 8 9
+
+
+
+
+		//如何用程序实现以上步骤
+		for(j=0;j<arr.length-1;j++){
+			for(var i = 0;i<arr.length-1-j;i++)
+			{
+			//去比较数组里面的i项及i+1项
+			//如果i项大于i+1项 调换位置
+				if(arr[i]>arr[i+1])
+				{
+					var tmp = arr[i+1];
+					arr[i+1] = arr[i];
+					arr[i]= tmp;
+				}
+			}
+		}
+		//console.log(arr);
+		
+		function handsome() 
+		{
+			var sum = 0;//求传进来的参数和
+			for(var i=0;i<arguments.length;i++)
+			{
+				sum = sum + arguments[i];
+			}
+			//return 作用：1结束函数执行;
+			//2 把值返回到函数外面，可以用变量接收
+			return sum;
+			console.log(11);
+		}
+		var result = handsome(3,4,5);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
